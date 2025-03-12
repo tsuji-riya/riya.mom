@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import * as THREE from "three";
 import {Clock} from "three";
-import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
-import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
+import {GLTFLoader} from "three/addons/loaders/GLTFLoader.js";
+import {OrbitControls} from "three/addons/controls/OrbitControls.js";
 import {onMounted} from "vue";
 
 onMounted(async () => {
