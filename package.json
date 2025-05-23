@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "run-p generate && run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build"
+    "type-check": "vue-tsc --build",
+    "generate": "node scripts/generate.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.13",
+    "@types/marked": "^6.0.0",
     "@types/three": "^0.174.0",
+    "marked": "^15.0.12",
     "tailwindcss": "^4.0.13",
     "three": "^0.174.0",
     "three-addons": "^1.2.0",
