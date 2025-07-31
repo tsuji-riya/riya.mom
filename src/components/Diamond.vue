@@ -4,6 +4,7 @@ import {Clock} from "three";
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader.js";
 import {OrbitControls} from "three/addons/controls/OrbitControls.js";
 import {onMounted} from "vue";
+import NoisyText from "@/components/NoisyText.vue";
 
 onMounted(async () => {
   const canvasWrapper = document.querySelector("#canvas-wrapper") as HTMLDivElement;
@@ -79,7 +80,7 @@ onMounted(async () => {
 <template>
   <div id="canvas-wrapper" class="h-[400px]">
     <canvas id="canvas"/>
-    <p class="text-sm text-gray-600 text-right">this floating diamond is cool, alright? <br /> by riya</p>
+    <p class="text-sm text-gray-600 text-right"><NoisyText text="this floating diamond is cool, alright?" /> <br /><NoisyText text="by riya" /></p>
   </div>
 </template>
 
